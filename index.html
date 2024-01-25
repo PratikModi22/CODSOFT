@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcutor</title>
+    <link rel="shortcut icon" href="https://tse2.mm.bing.net/th?id=OIP.iuYJfK0NUgzfy_UTj2dmRgHaHa&pid=Api&P=0&h=180" type="image/x-icon">
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+             input
+             {
+                cursor: pointer;
+             }
+    </style>
+</head>
+<body class="p-0 m-0 font-sans">
+
+    <div class=" bg-gray-800  w-screen h-screen grid justify-center items-center text-white">
+            <form >
+                <h1 class="text-center text-5xl p-10 "> Calculator </h1>
+                
+             <div  class="grid grid-cols-4 gap-4 w-80  grid-rows-5 row-span-3 text-4xl p-4 border-white border-2 rounded-xl shadow-white shadow" >
+                <div class="display col-span-4">
+                
+                    <input type="text" name="display" class="text-right text-black text-4xl h-[55px] w-[100%] rounded-xl decoration-0">
+
+                </div>
+            <input value="AC" type="button"onclick="display.value =''" class="bg-red-500 rounded-2xl"></input>
+            <input value="DE" type="button" onclick="display.value = display.value.toString().slice(0,-1)" class="bg-yellow-500 rounded-xl"></input>
+            <input value="." type="button" onclick="display.value +='.'"class="bg-yellow-500 rounded-xl"></input>
+            <input value="/" type="button" onclick="display.value +='/'" class="bg-yellow-500 rounded-xl"></input>
+            <input value="7" onclick="display.value +='7'" type="button"></input>
+            <input value="8" type="button"onclick="display.value +='8'"></input>
+            <input value="9" type="button"onclick="display.value +='9'"></input>
+            <input value="*" type="button"onclick="display.value +='*'" class="bg-yellow-500 rounded-xl"></input>
+            <input value="4" type="button"onclick="display.value +='4'"></input>
+            <input value="5" type="button"onclick="display.value +='5'"></input>
+            <input value="6" type="button"onclick="display.value +='6'"></input>
+            <input value="-" type="button"onclick="display.value +='-'" class="bg-yellow-500 rounded-xl"></input>
+            <input value="1" type="button"onclick="display.value +='1'"></input>
+            <input value="2" type="button"onclick="display.value +='2'"></input>
+            <input value="3" type="button"onclick="display.value +='3'"></input>
+            <input value="+" type="button"onclick="display.value +='+'" class="bg-yellow-500 rounded-xl"></input>
+            <input value="00" type="button"onclick="display.value +='00'"></input>
+            <input value="0" type="button"onclick="display.value +='0'"></input>
+            <input value="="  class="col-span-2 bg-green-500 rounded-md" type="button"onclick="display.value=eval(display.value)"></input>
+            </div>
+        </form>
+    </div>   
+</body>
+</html>
